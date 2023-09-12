@@ -1,0 +1,22 @@
+.intro_wrap {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.descriptionTxt {
+    font-family: asap-semiBold;
+}
+.descriptionTxt dt {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+.descriptionTxt dd {
+    font-size: 14px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+.descriptionImg {
+}
