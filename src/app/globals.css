@@ -1,2 +1,26 @@
 :root {
+    --max-width: 1100px;
+    --border-radius: 12px;
+    --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+        "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+        "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+    --box-background-rgb: rgb(64, 64, 64);
+    --background-rgb: rgb(101, 101, 101);
+    --highlight-font-color: rgb(62, 255, 200);
+}
+
+@font-face {
+    font-family: "asap-semiBold";
+    src: url("/font/Asap_SemiExpanded-SemiBold.ttf");
+}
+
+body {
+    background-color: var(--background-rgb);
+    color: white;
+}
+
+.homeWrap {
+    width: 90vw;
+    margin: 0 auto;
 }
