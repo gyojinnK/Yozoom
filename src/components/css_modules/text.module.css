@@ -1,0 +1,15 @@
+.title {
+    color: var(--highlight-font-color);
+}
+
+.dt {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.dd {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
