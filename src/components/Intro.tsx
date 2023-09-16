@@ -3,34 +3,32 @@ import useIsMobile from "@/hooks/useIsMobile";
 import Image from "next/image";
 import logo from "../../public/img/logo.png";
 import "./Intro.css";
+import layoutStyles from "./css_modules/layout.module.css";
+import textStyle from "./css_modules/text.module.css";
 
 const Intro = () => {
     const isMobile = useIsMobile();
 
     return (
-        <Box height="190px">
-            <div className="descriptionTxt">
-                <dt
+        <Box heights="190px">
+            <div className={`${layoutStyles.flexBox} introWrap`}>
+                <div className="descriptionTxt">
+                    <dt className={textStyle.dt}>요즘 트렌드를 Zoom!</dt>
+                    <dd className={textStyle.dd}>
+                        분석된 다양한 트렌드를 만나보세요. <br />
+                        선두주자가 되는 길은 여기에 있습니다.
+                    </dd>
+                </div>
+                <Image
+                    src={logo}
+                    alt="logo of service"
+                    width={300}
                     style={{
-                        fontSize: isMobile ? "14px" : "24px",
+                        width: isMobile ? "200px" : "300px",
+                        height: isMobile ? "40px" : "58px",
                     }}
-                >
-                    요즘 트렌드를 Zoom!
-                </dt>
-                <dd>
-                    분석된 다양한 트렌드를 만나보세요. <br />
-                    선두주자가 되는 길은 여기에 있습니다.
-                </dd>
+                />
             </div>
-            <Image
-                src={logo}
-                alt="logo of service"
-                width={300}
-                style={{
-                    width: isMobile ? "200px" : "300px",
-                    height: isMobile ? "40px" : "58px",
-                }}
-            />
         </Box>
     );
 };
