@@ -1,25 +1,26 @@
 {
-  "name": "yozoom_proj",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.6.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
-    "@types/react-responsive": "^8.0.5",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-responsive": "^9.0.2",
-    "styled-components": "^6.0.7",
-    "typescript": "5.2.2"
-  }
+    "name": "yozoom_proj",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "deploy": "next build && next export"
+    },
+    "dependencies": {
+        "@types/node": "20.6.0",
+        "@types/react": "18.2.21",
+        "@types/react-dom": "18.2.7",
+        "@types/react-responsive": "^8.0.5",
+        "eslint": "8.49.0",
+        "eslint-config-next": "13.4.19",
+        "next": "13.4.19",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-responsive": "^9.0.2",
+        "styled-components": "^6.0.7",
+        "typescript": "5.2.2"
+    }
 }
