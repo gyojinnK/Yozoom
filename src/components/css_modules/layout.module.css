@@ -1,0 +1,23 @@
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1000px) {
+        justify-content: space-evenly;
+    }
+}
+
+.dtLayout {
+    @media screen and (max-width: 800px) {
+        font-size: 18px;
+    }
+}
+
+.ddLayout {
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+    }
+}
