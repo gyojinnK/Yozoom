@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
     title: "요즘 트렌트를 Zoom - Yozoom",
@@ -15,6 +16,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <Head>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+                />
+            </Head>
             <body>
                 <div className="homeWrap">
                     <Header />
