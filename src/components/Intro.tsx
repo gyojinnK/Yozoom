@@ -12,7 +12,7 @@ const Intro = () => {
             <Head>
                 <meta
                     name="viewport"
-                    content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+                    content="initial-scale=1,maximum-scale=1,width=device-width"
                 />
             </Head>
             <Box heights="190px">
@@ -28,7 +28,6 @@ const Intro = () => {
                         src={logo}
                         alt="logo of service"
                         width={300}
-                        height={58}
                         priority={false}
                     />
                 </div>
