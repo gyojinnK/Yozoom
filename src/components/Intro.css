@@ -1,7 +1,17 @@
+/* .introWrap {
+    margin: 0 auto;
+    width: 90%;
+    height: 190px;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+} */
+
 .introWrap {
     margin: 0 auto;
     width: 90%;
     height: 190px;
+    flex-direction: row;
     @media screen and (max-width: 1000px) {
         flex-direction: column;
     }
