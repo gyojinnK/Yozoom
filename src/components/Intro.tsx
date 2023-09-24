@@ -12,7 +12,7 @@ const Intro = () => {
             <Head>
                 <meta
                     name="viewport"
-                    content="initial-scale=1,maximum-scale=1,width=device-width"
+                    content="initial-scale=1, width=device-width"
                 />
             </Head>
             <Box heights="190px">
