@@ -1,37 +1,33 @@
 import Box from "@/UI/Box";
-import useIsMobile from "@/hooks/useIsMobile";
 import Image from "next/image";
 import logo from "../../public/img/logo.png";
 import "./Intro.css";
 import layoutStyles from "./css_modules/layout.module.css";
 import textStyle from "./css_modules/text.module.css";
+import Head from "next/head";
 
 const Intro = () => {
-    const isMobile = useIsMobile();
-
     return (
-        <Box heights="190px">
-            <div className={`${layoutStyles.flexBox} introWrap`}>
-                <div className="descriptionTxt">
-                    <dt className={textStyle.dt}>요즘 트렌드를 Zoom!</dt>
-                    <dd className={textStyle.dd}>
-                        분석된 다양한 트렌드를 만나보세요. <br />
-                        선두주자가 되는 길은 여기에 있습니다.
-                    </dd>
-                </div>
-                <Image
-                    src={logo}
-                    alt="logo of service"
-                    width={300}
-                    style={
-                        {
-                            // width: isMobile ? "200px" : "300px",
-                            // height: isMobile ? "40px" : "58px",
-                        }
-                    }
+        <>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
                 />
-            </div>
-        </Box>
+            </Head>
+            <Box heights="190px">
+                <div className={`${layoutStyles.flexBox} introWrap`}>
+                    <div className="descriptionTxt">
+                        <dt className={textStyle.dt}>요즘 트렌드를 Zoom!</dt>
+                        <dd className={textStyle.dd}>
+                            분석된 다양한 트렌드를 만나보세요. <br />
+                            선두주자가 되는 길은 여기에 있습니다.
+                        </dd>
+                    </div>
+                    <Image src={logo} alt="logo of service" width={300} />
+                </div>
+            </Box>
+        </>
     );
 };
 
