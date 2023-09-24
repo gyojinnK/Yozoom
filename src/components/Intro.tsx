@@ -24,7 +24,13 @@ const Intro = () => {
                             선두주자가 되는 길은 여기에 있습니다.
                         </dd>
                     </div>
-                    <Image src={logo} alt="logo of service" width={300} />
+                    <Image
+                        src={logo}
+                        alt="logo of service"
+                        width={300}
+                        height={58}
+                        priority={false}
+                    />
                 </div>
             </Box>
         </>
