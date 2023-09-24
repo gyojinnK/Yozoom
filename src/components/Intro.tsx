@@ -28,6 +28,7 @@ const Intro = () => {
                         src={logo}
                         alt="logo of service"
                         width={300}
+                        height={58}
                         priority={false}
                     />
                 </div>
