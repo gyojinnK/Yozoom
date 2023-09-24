@@ -23,10 +23,12 @@ const Intro = () => {
                     src={logo}
                     alt="logo of service"
                     width={300}
-                    style={{
-                        width: isMobile ? "200px" : "300px",
-                        height: isMobile ? "40px" : "58px",
-                    }}
+                    style={
+                        {
+                            // width: isMobile ? "200px" : "300px",
+                            // height: isMobile ? "40px" : "58px",
+                        }
+                    }
                 />
             </div>
         </Box>
