@@ -5,7 +5,12 @@ import css from "@/styles/Header.module.css";
 export default function Header() {
     return (
         <header className={css.header}>
-            <Image src={logo} alt="logo of yozoom" width={140} />
+            <Image
+                src={logo}
+                alt="logo of yozoom"
+                width={140}
+                priority={true}
+            />
             <nav className={css.headerNav}>
                 <ul className={css.headerNavUl}>
                     <li>Searchs</li>
