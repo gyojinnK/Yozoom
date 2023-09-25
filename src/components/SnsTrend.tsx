@@ -1,6 +1,6 @@
 import Box from "@/UI/Box";
-import layoutStyle from "./css_modules/layout.module.css";
-import textStyle from "./css_modules/text.module.css";
+import layoutStyle from "@/styles/layout.module.css";
+import textStyle from "@/styles/text.module.css";
 import Image from "next/image";
 import gIcon from "@/../public/img/gicon.png";
 
