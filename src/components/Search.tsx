@@ -1,8 +1,8 @@
 import Box from "@/UI/Box";
 import Image from "next/image";
 import nLogo from "../../public/img/naver_logo.png";
-import styles1 from "./css_modules/text.module.css";
-import styles2 from "./css_modules/layout.module.css";
+import styles1 from "@/styles/text.module.css";
+import styles2 from "@/styles/layout.module.css";
 
 const Search = () => {
     return (
