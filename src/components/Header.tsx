@@ -9,6 +9,7 @@ export default function Header() {
                 src={logo}
                 alt="logo of yozoom"
                 width={140}
+                height={27}
                 priority={true}
             />
             <nav className={css.headerNav}>
