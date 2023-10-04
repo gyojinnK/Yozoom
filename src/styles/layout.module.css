@@ -5,19 +5,31 @@
     width: 90%;
     margin: 0 auto;
 
-    @media screen and (max-width: 1000px) {
+    /* @media screen and (max-width: 1000px) {
         justify-content: space-evenly;
-    }
+    } */
 }
 
 .dtLayout {
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
         font-size: 18px;
-    }
+    } */
 }
 
 .ddLayout {
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
+        font-size: 14px;
+    } */
+}
+
+@media only screen and (max-width: 1000px) {
+    .flexBox {
+        justify-content: space-evenly;
+    }
+    .dtLayout {
+        font-size: 18px;
+    }
+    .ddLayout {
         font-size: 14px;
     }
 }
