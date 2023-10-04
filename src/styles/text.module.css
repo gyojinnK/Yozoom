@@ -3,12 +3,14 @@
 }
 
 .dt {
+    font-family: "asap-Bold";
     font-weight: 600;
     font-size: 24px;
     margin: 0 0 10px 0;
 }
 
 .dd {
+    font-family: "asap-semiBold";
     font-size: 14px;
     margin: 0;
     padding: 0;

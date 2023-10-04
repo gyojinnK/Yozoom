@@ -1,23 +1,20 @@
 import Box from "@/UI/Box";
-import layoutStyle from "@/styles/layout.module.css";
-import textStyle from "@/styles/text.module.css";
+import layoutCss from "@/styles/layout.module.css";
+import textCss from "@/styles/text.module.css";
 import Image from "next/image";
 import gIcon from "@/../public/img/gicon.png";
 
 const SnsTrend = () => {
     return (
         <Box>
-            <div
-                className={`${layoutStyle.flexBox}`}
-                style={{ height: "100px" }}
-            >
+            <div className={`${layoutCss.flexBox}`} style={{ height: "100px" }}>
                 <div className="searchTxt">
                     <dt
-                        className={`${textStyle.title} ${textStyle.dt} ${layoutStyle.dtLayout}`}
+                        className={`${textCss.title} ${textCss.dt} ${layoutCss.dtLayout}`}
                     >
                         SNS 분석
                     </dt>
-                    <dd className={`${textStyle.dd} ${layoutStyle.ddLayout}`}>
+                    <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
                         SNS 최신의 트렌드를 분석합니다.
                     </dd>
                 </div>
