@@ -28,6 +28,16 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .introWrap {
+        flex-direction: column;
+    }
+    .img {
+        width: 250px;
+        height: 48px;
+    }
+}
+
 /* .descriptionTxt dt {
     font-weight: 600;
     font-size: 24px;
