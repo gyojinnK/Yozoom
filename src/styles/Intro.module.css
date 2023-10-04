@@ -12,9 +12,9 @@
     width: 90%;
     height: 190px;
     flex-direction: row;
-    @media screen and (max-width: 1000px) {
+    /* @media screen and (max-width: 1000px) {
         flex-direction: column;
-    }
+    } */
 }
 
 .descriptionTxt {
@@ -22,10 +22,10 @@
 }
 
 .img {
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
         width: 250px;
         height: 48px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1000px) {
