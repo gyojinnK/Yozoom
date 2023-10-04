@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "../../public/img/logo.png";
 import css from "@/styles/Header.module.css";
+import textCss from "@/styles/text.module.css";
 
 export default function Header() {
     return (
@@ -14,9 +15,9 @@ export default function Header() {
             />
             <nav className={css.headerNav}>
                 <ul className={css.headerNavUl}>
-                    <li>Searchs</li>
-                    <li>Trends</li>
-                    <li>MyTrend</li>
+                    <li className={textCss.dd}>Searchs</li>
+                    <li className={textCss.dd}>Trends</li>
+                    <li className={textCss.dd}>MyTrend</li>
                 </ul>
             </nav>
         </header>
