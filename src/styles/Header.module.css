@@ -2,14 +2,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.headerNav {
-    width: 185px;
-}
-.headerNavUl {
-    padding: 0;
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+    height: 80px;
 }
