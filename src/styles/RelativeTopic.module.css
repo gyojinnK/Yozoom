@@ -1,0 +1,38 @@
+.rtTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rtForm {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.rtP {
+    font-size: 0.75rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+.rtInput {
+    border: none;
+    color: var(--highlight-font-color);
+    background-color: var(--background-rgb);
+    font-family: "asap-semiBold";
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    text-align: right;
+}
+
+.rtInput:focus {
+    outline: none;
+}
