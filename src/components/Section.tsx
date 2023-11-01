@@ -1,9 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import Intro from "./Intro";
-import Search from "./Search";
-import SnsTrend from "./SnsTrend";
 import { getDataToDj } from "@/hooks/GetDataTest";
+import RelativeTopic from "./RelativeTopic";
+import Timelapse from "./Timelapse";
+import AiProccessing from "./AiProccessing";
 
 const Section = () => {
     useEffect(() => {
@@ -12,9 +12,9 @@ const Section = () => {
 
     return (
         <>
-            <Intro />
-            <Search />
-            <SnsTrend />
+            <RelativeTopic />
+            <Timelapse />
+            <AiProccessing />
         </>
     );
 };
