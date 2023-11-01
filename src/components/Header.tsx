@@ -13,13 +13,6 @@ export default function Header() {
                 height={27}
                 priority={true}
             />
-            <nav className={css.headerNav}>
-                <ul className={css.headerNavUl}>
-                    <li className={textCss.dd}>Searchs</li>
-                    <li className={textCss.dd}>Trends</li>
-                    <li className={textCss.dd}>MyTrend</li>
-                </ul>
-            </nav>
         </header>
     );
 }
