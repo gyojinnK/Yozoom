@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-family: "asap-regular";
+    font-size: 0.85rem;
 }
 .ftCopy {
     display: flex;
@@ -20,7 +22,7 @@
 
 .ftTitleP {
     color: var(--highlight-font-color);
-    margin-right: 10px;
+    margin: 0 10px 0 0;
     opacity: 0.5;
 }
 
@@ -33,4 +35,11 @@
     text-decoration: none;
     color: white;
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ftWrap {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
