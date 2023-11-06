@@ -9,7 +9,10 @@ import InputBox from "@/UI/InputBox";
 const AiProccessing = () => {
     return (
         <Box>
-            <div className={`${layoutCss.flexBox}`} style={{ height: "100px" }}>
+            <div
+                className={`${layoutCss.flexBox} ${aiCss.aiWrap}`}
+                style={{ height: "100px" }}
+            >
                 <div className={aiCss.aiTiaie}>
                     <Image
                         src={aiImg}
@@ -30,10 +33,9 @@ const AiProccessing = () => {
                 </div>
                 <InputBox>
                     <form className={aiCss.aiForm}>
-                        <p className={aiCss.aiP}>키워드를 입력하세요.</p>
                         <input
                             className={aiCss.aiInput}
-                            placeholder="ex) 강교진"
+                            placeholder="키워드를 입력하세요."
                         ></input>
                     </form>
                 </InputBox>
