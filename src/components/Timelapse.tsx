@@ -24,10 +24,10 @@ const Timelapse = () => {
                         <dt
                             className={`${textCss.title} ${textCss.dt} ${layoutCss.dtLayout}`}
                         >
-                            관심도 동향
+                            관심 동향
                         </dt>
                         <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
-                            최대 3가지 키워드의 과거 동향을 확인하세요.
+                            최대 3가지 키워드 동향
                         </dd>
                     </div>
                 </div>

@@ -24,10 +24,10 @@ const AiProccessing = () => {
                         <dt
                             className={`${textCss.title} ${textCss.dt} ${layoutCss.daiayout}`}
                         >
-                            관심도 예측
+                            관심 예측
                         </dt>
                         <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
-                            키워드의 미래 관심도를 예측하세요.
+                            키워드의 미래 관심도
                         </dd>
                     </div>
                 </div>

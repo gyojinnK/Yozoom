@@ -27,7 +27,7 @@ const RelativeTopic = () => {
                             관련 주재
                         </dt>
                         <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
-                            키워드에 관련된 주제들을 알려드릴게요,
+                            키워드 관련 주제들
                         </dd>
                     </div>
                 </div>

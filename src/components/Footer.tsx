@@ -19,13 +19,13 @@ const Footer = () => {
             </div>
             <div className={ftCss.ftIndex}>
                 <p className={ftCss.ftTitleP}>@Index</p>
-                <p className={ftCss.ftP} style={{ marginRight: 12 }}>
-                    관련 주제
+                <p className={ftCss.ftP} style={{ marginRight: 8 }}>
+                    주제
                 </p>
-                <p className={ftCss.ftP} style={{ marginRight: 12 }}>
-                    관심도 동향
+                <p className={ftCss.ftP} style={{ marginRight: 8 }}>
+                    동향
                 </p>
-                <p className={ftCss.ftP}>관심도 예측</p>
+                <p className={ftCss.ftP}>예측</p>
             </div>
             <div className={ftCss.ftContact}>
                 <p className={ftCss.ftTitleP}>@Contact</p>

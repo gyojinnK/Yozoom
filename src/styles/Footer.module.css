@@ -1,8 +1,8 @@
 .ftWrap {
     width: 100%;
-    height: 200px;
+    height: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-family: "asap-regular";
     font-size: 0.85rem;
@@ -10,20 +10,23 @@
 .ftCopy {
     display: flex;
     align-items: center;
+    margin: 0 5px;
 }
 .ftIndex {
     display: flex;
     align-items: center;
+    margin: 0 5px;
 }
 .ftContact {
     display: flex;
     align-items: center;
+    margin: 0 5px;
 }
 
 .ftTitleP {
     color: var(--highlight-font-color);
-    margin: 0 10px 0 0;
     opacity: 0.5;
+    margin: 0 5px;
 }
 
 .ftP {
