@@ -9,7 +9,10 @@ import relativeImg from "@/../public/img/relativeTopic.png";
 const RelativeTopic = () => {
     return (
         <Box>
-            <div className={`${layoutCss.flexBox}`} style={{ height: "100px" }}>
+            <div
+                className={`${layoutCss.flexBox} ${rtCss.rtWrap}`}
+                style={{ height: "100px" }}
+            >
                 <div className={rtCss.rtTitle}>
                     <Image
                         src={relativeImg}
@@ -30,10 +33,10 @@ const RelativeTopic = () => {
                 </div>
                 <InputBox>
                     <form className={rtCss.rtForm}>
-                        <p className={rtCss.rtP}>키워드를 입력하세요.</p>
+                        {/* <p className={rtCss.rtP}>키워드를 입력하세요.</p> */}
                         <input
                             className={rtCss.rtInput}
-                            placeholder="ex) 손흥민"
+                            placeholder="키워드를 입력하세요."
                         ></input>
                     </form>
                 </InputBox>
