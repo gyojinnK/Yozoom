@@ -11,28 +11,31 @@
     display: inline-block;
 }
 
-.tlP {
-    font-size: 0.75rem;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    left: 4px;
-    top: 4px;
-}
-
 .tlInput {
     border: none;
     color: var(--highlight-font-color);
     background-color: var(--background-rgb);
     font-family: "asap-semiBold";
     font-weight: 600;
-    font-size: 1.15rem;
-    position: absolute;
-    right: 4px;
-    bottom: 4px;
+    font-size: 1rem;
     text-align: right;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 75px);
+    text-align: center;
 }
 
 .tlInput:focus {
     outline: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .tlWrap {
+        padding: 20px 0;
+    }
+    .tlTitle {
+        margin-bottom: 10px;
+    }
 }

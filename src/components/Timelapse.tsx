@@ -9,7 +9,10 @@ import InputBox from "@/UI/InputBox";
 const Timelapse = () => {
     return (
         <Box>
-            <div className={`${layoutCss.flexBox}`} style={{ height: "100px" }}>
+            <div
+                className={`${layoutCss.flexBox} ${tlCss.tlWrap}`}
+                style={{ height: "100px" }}
+            >
                 <div className={tlCss.tlTitle}>
                     <Image
                         src={tlImg}
@@ -24,18 +27,15 @@ const Timelapse = () => {
                             관심도 동향
                         </dt>
                         <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
-                            과거부터 현재까지, 그래프로 확인하세요.
+                            최대 3가지 키워드의 과거 동향을 확인하세요.
                         </dd>
                     </div>
                 </div>
                 <InputBox>
                     <form className={tlCss.tlForm}>
-                        <p className={tlCss.tlP}>
-                            키워드를 입력하세요. (최대 3가지)
-                        </p>
                         <input
                             className={tlCss.tlInput}
-                            placeholder="ex) BTS, 박재범, 강교진"
+                            placeholder="키워드를 입력하세요."
                         ></input>
                     </form>
                 </InputBox>
