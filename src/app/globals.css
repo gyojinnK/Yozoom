@@ -11,6 +11,10 @@
 }
 
 @font-face {
+    font-family: "asap-regular";
+    src: url("/font/Asap_SemiExpanded-Regular.ttf");
+}
+@font-face {
     font-family: "asap-semiBold";
     src: url("/font/Asap_SemiExpanded-SemiBold.ttf");
 }
