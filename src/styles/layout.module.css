@@ -25,6 +25,7 @@
 @media only screen and (max-width: 1000px) {
     .flexBox {
         justify-content: space-evenly;
+        flex-direction: column;
     }
     .dtLayout {
         font-size: 18px;
