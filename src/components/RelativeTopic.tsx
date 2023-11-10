@@ -5,8 +5,40 @@ import layoutCss from "@/styles/layout.module.css";
 import rtCss from "@/styles/RelativeTopic.module.css";
 import InputBox from "@/UI/InputBox";
 import relativeImg from "@/../public/img/relativeTopic.png";
+import { useState } from "react";
 
 const RelativeTopic = () => {
+    const [enteredRtWord, setEnteredRtWord] = useState("");
+    const [rtData, setRtData] = useState();
+
+    const postToBackEnd = () => {
+        console.log(enteredRtWord);
+        fetch(
+            `http://localhost:8000/call_relative_topic/get-relative-topic/?keyword=${encodeURIComponent(
+                enteredRtWord
+            )}`,
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        )
+            .then((res) => res.json())
+            .then((data) => setRtData(data));
+
+        console.log(rtData);
+    };
+
+    const changeRtWord = (e: any) => {
+        setEnteredRtWord(e.target.value);
+    };
+
+    const submitHandler = (e: any) => {
+        e.preventDefault();
+        postToBackEnd();
+    };
+
     return (
         <Box>
             <div
@@ -24,7 +56,7 @@ const RelativeTopic = () => {
                         <dt
                             className={`${textCss.title} ${textCss.dt} ${layoutCss.dtLayout}`}
                         >
-                            관련 주재
+                            관련 주제
                         </dt>
                         <dd className={`${textCss.dd} ${layoutCss.ddLayout}`}>
                             키워드 관련 주제들
@@ -32,10 +64,11 @@ const RelativeTopic = () => {
                     </div>
                 </div>
                 <InputBox>
-                    <form className={rtCss.rtForm}>
+                    <form className={rtCss.rtForm} onSubmit={submitHandler}>
                         {/* <p className={rtCss.rtP}>키워드를 입력하세요.</p> */}
                         <input
                             className={rtCss.rtInput}
+                            onChange={changeRtWord}
                             placeholder="키워드를 입력하세요."
                         ></input>
                     </form>
