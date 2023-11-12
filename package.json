@@ -10,6 +10,8 @@
         "deploy": "next build && next export"
     },
     "dependencies": {
+        "@nivo/api": "^0.74.1",
+        "@nivo/circle-packing": "^0.83.0",
         "@types/node": "20.6.0",
         "@types/react": "18.2.21",
         "@types/react-dom": "18.2.7",
