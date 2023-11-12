@@ -6,6 +6,7 @@ import rtCss from "@/styles/RelativeTopic.module.css";
 import InputBox from "@/UI/InputBox";
 import relativeImg from "@/../public/img/relativeTopic.png";
 import { useState } from "react";
+import RelativeTopicView from "./RelativeTopicView";
 
 const RelativeTopic = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
@@ -74,6 +75,7 @@ const RelativeTopic = () => {
                     </form>
                 </InputBox>
             </div>
+            {rtData ? <RelativeTopicView data={rtData} /> : null}
         </Box>
     );
 };
