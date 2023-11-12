@@ -37,6 +37,9 @@ const RelativeTopicView = (props: any) => {
         <div
             style={{
                 display: "flex",
+                margin: "0 auto",
+                width: "90%",
+                justifyContent: "space-evenly",
             }}
         >
             <div>
