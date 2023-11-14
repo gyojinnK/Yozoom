@@ -11,12 +11,12 @@ const RelativeTopicView = (props: any) => {
             let risingTemp = [];
             for (let i = 0; i < 5; i++) {
                 topTemp.push({
-                    title: datas.top[i].topic_title,
-                    type: datas.top[i].topic_type,
+                    title: datas.top[i]?.topic_title,
+                    type: datas.top[i]?.topic_type,
                 });
                 risingTemp.push({
-                    title: datas.rising[i].topic_title,
-                    type: datas.rising[i].topic_type,
+                    title: datas.rising[i]?.topic_title,
+                    type: datas.rising[i]?.topic_type,
                 });
             }
             setTopDatas(topTemp);
