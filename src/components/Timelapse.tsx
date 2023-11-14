@@ -5,16 +5,18 @@ import tlCss from "@/styles/Timelapse.module.css";
 import Image from "next/image";
 import tlImg from "@/../public/img/Graph.png";
 import InputBox from "@/UI/InputBox";
-import { Dispatch, useState } from "react";
+import { Dispatch, useEffect, useState } from "react";
+import TimelapseView from "./TimelapseView";
 
 const Timelapse = () => {
     const [enteredTlWord, setEnteredTlWord] = useState("");
-    const [TlData, setTlData] = useState();
+    const [keywords, setKeywords] = useState([""]);
+    const [TlData, setTlData] = useState([]);
 
     const postToBackEnd = () => {
         console.log(enteredTlWord);
         fetch(
-            `http://localhost:8000/call_datas_app/get-go-trends/?keyword=${encodeURIComponent(
+            `http://localhost:8000/call_datas_app/get-dl-trends/?keyword=${encodeURIComponent(
                 enteredTlWord
             )}`,
             {
@@ -24,10 +26,23 @@ const Timelapse = () => {
                 },
             }
         )
-            .then((res) => res.json())
-            .then((data) => setTlData(data));
-
-        console.log(TlData);
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`HTTP Error!: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                setTlData(data);
+                console.log(TlData);
+                enteredTlWord.includes(",")
+                    ? setKeywords(enteredTlWord.split(","))
+                    : setKeywords([enteredTlWord]);
+            })
+            .catch((e) => {
+                console.error("An error occurred: ", e.message);
+                alert("요청을 많습니다. 잠시후 다시 시도해주세요!");
+            });
     };
 
     const changeTlWord = (e: any) => {
@@ -36,8 +51,13 @@ const Timelapse = () => {
 
     const submitHandler = (e: any) => {
         e.preventDefault();
+        setTlData([]);
         postToBackEnd();
     };
+
+    useEffect(() => {
+        console.log("Recived Data : ", TlData);
+    }, [TlData]);
 
     return (
         <Box>
@@ -73,6 +93,7 @@ const Timelapse = () => {
                     </form>
                 </InputBox>
             </div>
+            <TimelapseView data={TlData} keywords={keywords} />
         </Box>
     );
 };
