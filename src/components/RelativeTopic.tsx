@@ -15,7 +15,7 @@ const RelativeTopic = () => {
     const postToBackEnd = () => {
         console.log(enteredRtWord);
         fetch(
-            `http://localhost:8000/call_relative_topic/get-relative-topic/?keyword=${encodeURIComponent(
+            `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/call_relative_topic/get-relative-topic/?keyword=${encodeURIComponent(
                 enteredRtWord
             )}`,
             {

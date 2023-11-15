@@ -16,7 +16,7 @@ const Timelapse = () => {
     const postToBackEnd = () => {
         console.log(enteredTlWord);
         fetch(
-            `http://localhost:8000/call_datas_app/get-dl-trends/?keyword=${encodeURIComponent(
+            `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/call_datas_app/get-dl-trends/?keyword=${encodeURIComponent(
                 enteredTlWord
             )}`,
             {
