@@ -70,11 +70,11 @@ const TimelapseView = (props: { data: any; keywords: any }) => {
                             type: "linear",
                             min: "auto",
                             max: "auto",
-                            stacked: true,
+                            stacked: false,
                             reverse: false,
                         }}
                         yFormat=" >-.2d"
-                        curve="monotoneX"
+                        curve="natural"
                         axisTop={null}
                         axisRight={null}
                         axisBottom={{
@@ -90,14 +90,14 @@ const TimelapseView = (props: { data: any; keywords: any }) => {
                             tickSize: 5,
                             tickPadding: 5,
                             tickRotation: 0,
-                            //tickValues: [10, 20, 40, 60, 80, 100],
+                            tickValues: [10, 50, 100],
                             legend: "count",
                             legendOffset: -40,
                             legendPosition: "middle",
                         }}
                         enableGridX={false}
                         enablePoints={false}
-                        colors={{ scheme: "yellow_green" }}
+                        colors={{ scheme: "paired" }}
                         lineWidth={2}
                         //pointSize={5}
                         //pointColor={{ theme: "background" }}
