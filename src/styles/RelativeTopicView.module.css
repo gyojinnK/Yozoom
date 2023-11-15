@@ -1,0 +1,34 @@
+.wrap {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    padding: 0 0 20px 0;
+    justify-content: space-evenly;
+}
+
+.subWrap {
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px 0;
+    padding: 10px 0;
+}
+
+.type {
+    background-color: var(--background-rgb);
+    color: white;
+    width: 150px;
+    display: inline-block;
+    padding: 5px 0;
+    border-radius: 20px 0 0 20px;
+    margin: 2px 0 2px 2px;
+}
+
+.title {
+    display: inline-block;
+    background-color: var(--highlight-font-color);
+    color: var(--box-background-rgb);
+    border-radius: 0 20px 20px 0;
+    width: 124px;
+    padding: 5px 0;
+    margin: 2px 2px 2px 0;
+}
