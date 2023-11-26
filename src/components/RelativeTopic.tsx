@@ -7,10 +7,12 @@ import InputBox from "@/UI/InputBox";
 import relativeImg from "@/../public/img/relativeTopic.png";
 import { useState } from "react";
 import RelativeTopicView from "./RelativeTopicView";
+import Loading from "./Loading";
 
 const RelativeTopic = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
     const [rtData, setRtData] = useState();
+    const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
         console.log(enteredRtWord);
@@ -26,7 +28,10 @@ const RelativeTopic = () => {
             }
         )
             .then((res) => res.json())
-            .then((data) => setRtData(data));
+            .then((data) => {
+                setRtData(data);
+                setIsLoading(false);
+            });
 
         console.log(rtData);
     };
@@ -36,6 +41,7 @@ const RelativeTopic = () => {
     };
 
     const submitHandler = (e: any) => {
+        setIsLoading(true);
         e.preventDefault();
         postToBackEnd();
     };
@@ -75,7 +81,11 @@ const RelativeTopic = () => {
                     </form>
                 </InputBox>
             </div>
-            {rtData ? <RelativeTopicView data={rtData} /> : null}
+            {isLoading ? (
+                <Loading />
+            ) : rtData ? (
+                <RelativeTopicView data={rtData} loading={isLoading} />
+            ) : null}
         </Box>
     );
 };
