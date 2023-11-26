@@ -7,11 +7,13 @@ import tlImg from "@/../public/img/Graph.png";
 import InputBox from "@/UI/InputBox";
 import { Dispatch, useEffect, useState } from "react";
 import TimelapseView from "./TimelapseView";
+import Loading from "./Loading";
 
 const Timelapse = () => {
     const [enteredTlWord, setEnteredTlWord] = useState("");
     const [keywords, setKeywords] = useState([""]);
     const [TlData, setTlData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
         console.log(enteredTlWord);
@@ -38,6 +40,7 @@ const Timelapse = () => {
                 enteredTlWord.includes(",")
                     ? setKeywords(enteredTlWord.split(","))
                     : setKeywords([enteredTlWord]);
+                setIsLoading(false);
             })
             .catch((e) => {
                 console.error("An error occurred: ", e.message);
@@ -50,6 +53,7 @@ const Timelapse = () => {
     };
 
     const submitHandler = (e: any) => {
+        setIsLoading(true);
         e.preventDefault();
         setTlData([]);
         postToBackEnd();
@@ -93,7 +97,11 @@ const Timelapse = () => {
                     </form>
                 </InputBox>
             </div>
-            <TimelapseView data={TlData} keywords={keywords} />
+            {isLoading ? (
+                <Loading />
+            ) : TlData ? (
+                <TimelapseView data={TlData} keywords={keywords} />
+            ) : null}
         </Box>
     );
 };
