@@ -5,8 +5,45 @@ import aiCss from "@/styles/AiProccessing.module.css";
 import Image from "next/image";
 import aiImg from "@/../public/img/aiProcessing.png";
 import InputBox from "@/UI/InputBox";
+import { useState } from "react";
 
 const AiProccessing = () => {
+    const [enteredRtWord, setEnteredRtWord] = useState("");
+    const [pdData, setPdData] = useState();
+    const [isLoading, setIsLoading] = useState(false);
+
+    const postToBackEnd = () => {
+        console.log(enteredRtWord);
+        fetch(
+            `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/ai_analysis/get-predict-data/?keyword=${encodeURIComponent(
+                enteredRtWord
+            )}`,
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        )
+            .then((res) => res.json())
+            .then((data) => {
+                setPdData(data);
+                setIsLoading(false);
+            });
+
+        console.log(pdData);
+    };
+
+    const changePdWord = (e: any) => {
+        setEnteredRtWord(e.target.value);
+    };
+
+    const submitHandler = (e: any) => {
+        setIsLoading(true);
+        e.preventDefault();
+        postToBackEnd();
+    };
+
     return (
         <Box>
             <div
@@ -32,10 +69,11 @@ const AiProccessing = () => {
                     </div>
                 </div>
                 <InputBox>
-                    <form className={aiCss.aiForm}>
+                    <form className={aiCss.aiForm} onSubmit={submitHandler}>
                         <input
                             className={aiCss.aiInput}
                             placeholder="키워드를 입력하세요."
+                            onChange={changePdWord}
                         ></input>
                     </form>
                 </InputBox>
