@@ -7,7 +7,7 @@ import tlImg from "@/../public/img/Graph.png";
 import InputBox from "@/UI/InputBox";
 import { Dispatch, useEffect, useState } from "react";
 import TimelapseView from "./TimelapseView";
-import Loading from "./Loading";
+import Loading from "../UI/Loading";
 
 const Timelapse = () => {
     const [enteredTlWord, setEnteredTlWord] = useState("");
