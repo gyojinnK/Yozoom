@@ -7,7 +7,7 @@ import InputBox from "@/UI/InputBox";
 import relativeImg from "@/../public/img/relativeTopic.png";
 import { useState } from "react";
 import RelativeTopicView from "./RelativeTopicView";
-import Loading from "./Loading";
+import Loading from "../UI/Loading";
 
 const RelativeTopic = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
