@@ -5,7 +5,7 @@ import aiCss from "@/styles/AiProccessing.module.css";
 import Image from "next/image";
 import aiImg from "@/../public/img/aiProcessing.png";
 import InputBox from "@/UI/InputBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AiProccessing = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
@@ -30,8 +30,6 @@ const AiProccessing = () => {
                 setPdData(data);
                 setIsLoading(false);
             });
-
-        console.log(pdData);
     };
 
     const changePdWord = (e: any) => {
@@ -43,6 +41,11 @@ const AiProccessing = () => {
         e.preventDefault();
         postToBackEnd();
     };
+
+    // test
+    useEffect(() => {
+        console.log(pdData);
+    }, [pdData]);
 
     return (
         <Box>
