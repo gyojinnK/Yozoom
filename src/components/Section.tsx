@@ -2,7 +2,6 @@
 import RelativeTopic from "./RelativeTopic";
 import Timelapse from "./Timelapse";
 import AiProccessing from "./AiProccessing";
-import Loading from "./Loading";
 
 const Section = () => {
     return (
