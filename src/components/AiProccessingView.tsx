@@ -4,7 +4,7 @@ const AiProccessingView = (props: { data: string[] }) => {
     return (
         <ul>
             {props.data?.map((item: any) => (
-                <li>{item}</li>
+                <li key={item}>{item}</li>
             ))}
         </ul>
     );
