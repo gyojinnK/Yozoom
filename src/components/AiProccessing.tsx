@@ -6,10 +6,13 @@ import Image from "next/image";
 import aiImg from "@/../public/img/aiProcessing.png";
 import InputBox from "@/UI/InputBox";
 import { useEffect, useState } from "react";
+import Loading from "@/UI/Loading";
+import AiProccessingView from "./AiProccessingView";
 
 const AiProccessing = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
-    const [pdData, setPdData] = useState();
+    const [pdData, setPdData] = useState<string | any>();
+    const [parsedData, setParsedData] = useState<string[] | any>();
     const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
@@ -27,7 +30,7 @@ const AiProccessing = () => {
         )
             .then((res) => res.json())
             .then((data) => {
-                setPdData(data);
+                setPdData(Object.values(data)[0]);
                 setIsLoading(false);
             });
     };
@@ -45,6 +48,12 @@ const AiProccessing = () => {
     // test
     useEffect(() => {
         console.log(pdData);
+        if (pdData) {
+            let temp = pdData.replace("[", "");
+            temp = temp.replace("]", "");
+            let temps = temp.split(",");
+            setParsedData(temps);
+        }
     }, [pdData]);
 
     return (
@@ -81,6 +90,11 @@ const AiProccessing = () => {
                     </form>
                 </InputBox>
             </div>
+            {isLoading ? (
+                <Loading />
+            ) : pdData ? (
+                <AiProccessingView data={parsedData} />
+            ) : null}
         </Box>
     );
 };
