@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import tvCss from "@/styles/RelativeTopicView.module.css";
-import Loading from "./Loading";
+import Loading from "../UI/Loading";
 
 const RelativeTopicView = (props: any) => {
     const [topDatas, setTopDatas] = useState([{ title: "", type: "" }]);
