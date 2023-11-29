@@ -26,6 +26,11 @@
 body {
     background-color: var(--background-rgb);
     color: white;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
 .homeWrap {
