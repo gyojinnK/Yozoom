@@ -28,9 +28,18 @@ const AiProccessing = () => {
                 },
             }
         )
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("HTTP Error " + res.status);
+                }
+                return res.json();
+            })
             .then((data) => {
                 setPdData(Object.values(data)[0]);
+                setIsLoading(false);
+            })
+            .catch((err) => {
+                console.log("Error: ", err);
                 setIsLoading(false);
             });
     };
