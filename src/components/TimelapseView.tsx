@@ -30,9 +30,6 @@ const TimelapseView = (props: { data: any; keywords: any }) => {
                     }),
                 };
             });
-
-            console.log(temps);
-
             setFormattedData(temps);
         } else {
             alert("데이데 수신에 문제 발생!ㅜㅜ");
@@ -44,7 +41,6 @@ const TimelapseView = (props: { data: any; keywords: any }) => {
     }, [props.data]);
 
     useEffect(() => {
-        console.log("formatted Data: ", formattedData);
         if (formattedData[0]) {
             formattedData[0].id !== "" ? setIsFormat(true) : setIsFormat(false);
         } else {

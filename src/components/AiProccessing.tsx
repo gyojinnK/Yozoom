@@ -16,7 +16,6 @@ const AiProccessing = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
-        console.log(enteredRtWord);
         fetch(
             `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/ai_analysis/get-predict-data/?keyword=${encodeURIComponent(
                 enteredRtWord
@@ -56,7 +55,6 @@ const AiProccessing = () => {
 
     // test
     useEffect(() => {
-        console.log(pdData);
         if (pdData) {
             let temp = pdData.replace("[", "");
             temp = temp.replace("]", "");

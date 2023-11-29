@@ -16,7 +16,6 @@ const Timelapse = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
-        console.log(enteredTlWord);
         fetch(
             `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/call_datas_app/get-dl-trends/?keyword=${encodeURIComponent(
                 enteredTlWord
@@ -36,7 +35,6 @@ const Timelapse = () => {
             })
             .then((data) => {
                 setTlData(data);
-                console.log(TlData);
                 enteredTlWord.includes(",")
                     ? setKeywords(enteredTlWord.split(","))
                     : setKeywords([enteredTlWord]);
@@ -59,10 +57,6 @@ const Timelapse = () => {
         setTlData([]);
         postToBackEnd();
     };
-
-    useEffect(() => {
-        console.log("Recived Data : ", TlData);
-    }, [TlData]);
 
     return (
         <Box>
