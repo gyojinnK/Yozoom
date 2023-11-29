@@ -45,6 +45,7 @@ const Timelapse = () => {
             .catch((e) => {
                 console.error("An error occurred: ", e.message);
                 alert("요청을 많습니다. 잠시후 다시 시도해주세요!");
+                setIsLoading(false);
             });
     };
 
