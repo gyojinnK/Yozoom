@@ -16,6 +16,7 @@ const RelativeTopic = () => {
 
     const postToBackEnd = () => {
         console.log(enteredRtWord);
+
         fetch(
             `https://port-0-yozoom-be-5mk12alozx9jlq.sel5.cloudtype.app/call_relative_topic/get-relative-topic/?keyword=${encodeURIComponent(
                 enteredRtWord
@@ -27,12 +28,21 @@ const RelativeTopic = () => {
                 },
             }
         )
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("HTTP status " + res.status);
+                }
+                return res.json();
+            })
             .then((data) => {
                 setRtData(data);
                 setIsLoading(false);
+            })
+            .catch((err) => {
+                console.error("Error: ", err);
+                alert("요청을 처리하지 못했습니다. 잠시후 다시시도 해주세요!");
+                setIsLoading(false);
             });
-
         console.log(rtData);
     };
 
