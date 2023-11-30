@@ -98,7 +98,12 @@ const AiProccessing = () => {
                 </InputBox>
             </div>
             {isLoading ? (
-                <Loading />
+                <>
+                    <h3 style={{ textAlign: "center" }}>
+                        예측중... 잠시만 기다려주세요!
+                    </h3>
+                    <Loading />
+                </>
             ) : pdData ? (
                 <AiProccessingView data={parsedData} />
             ) : null}
