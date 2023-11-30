@@ -55,7 +55,8 @@ const AiProccessing = () => {
 
     // test
     useEffect(() => {
-        if (pdData) {
+        if (pdData && typeof pdData === "string") {
+            // pdData가 존재하고, 문자열일 때만 처리
             let temp = pdData.replace("[", "");
             temp = temp.replace("]", "");
             let temps = temp.split(",");
