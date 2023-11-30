@@ -148,21 +148,22 @@ const TimelapseView = (props: { data: any; keywords: any }) => {
                                     borderRadius: "5px",
                                     backgroundColor: point.serieColor,
                                     fontSize: "0.75rem",
-                                    width: "90px",
+                                    width: "95px",
                                     height: "35px",
                                     color: "rgb(64, 64, 64)",
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
+                                    padding: "0 10px",
                                 }}
                             >
                                 <div>
                                     <p
                                         style={{ margin: "0 auto" }}
-                                    >{`x: ${point.data.xFormatted}`}</p>
+                                    >{`날짜: ${point.data.xFormatted}`}</p>
                                     <p
                                         style={{ margin: "0 auto" }}
-                                    >{`y: ${point.data.yFormatted}`}</p>
+                                    >{`관심: ${point.data.yFormatted}`}</p>
                                 </div>
                             </div>
                         )}

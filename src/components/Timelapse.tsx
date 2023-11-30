@@ -87,7 +87,7 @@ const Timelapse = () => {
                         <input
                             className={tlCss.tlInput}
                             onChange={changeTlWord}
-                            placeholder="키워드를 입력하세요."
+                            placeholder="쉼표(,)로 구분해주세요."
                         ></input>
                     </form>
                 </InputBox>
