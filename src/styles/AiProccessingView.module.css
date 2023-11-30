@@ -1,0 +1,31 @@
+.head {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.body {
+    width: 90%;
+    padding-bottom: 50px;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.li {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
