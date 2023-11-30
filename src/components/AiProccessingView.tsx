@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import css from "@/styles/AiProccessingView.module.css";
 
-const AiProccessingView = (props: { data: string[] }) => {
+const AiProccessingView = (props: { data: number[] }) => {
     const [formattedData, setFormattedData] = useState<number[] | void[]>([]);
 
-    const dataFormattingHandler = (data: string[]) => {
+    const dataFormattingHandler = (data: number[]) => {
         if (data) {
             // data가 undefined 또는 null이 아닌 경우에만 처리
-            const dataN = data.map(Number);
-            const min = Math.min(...dataN);
-            const max = Math.max(...dataN);
-            const formatted = dataN.map((item: number) => {
+            const min = Math.min(...data);
+            const max = Math.max(...data);
+            const formatted = data.map((item: number) => {
                 return parseInt(
                     (((item - min) / (max - min)) * 100).toFixed(2)
                 );

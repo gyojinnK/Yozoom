@@ -11,8 +11,7 @@ import AiProccessingView from "./AiProccessingView";
 
 const AiProccessing = () => {
     const [enteredRtWord, setEnteredRtWord] = useState("");
-    const [pdData, setPdData] = useState<string | any>();
-    const [parsedData, setParsedData] = useState<string[] | any>();
+    const [pdData, setPdData] = useState<number | any>();
     const [isLoading, setIsLoading] = useState(false);
 
     const postToBackEnd = () => {
@@ -52,16 +51,6 @@ const AiProccessing = () => {
         e.preventDefault();
         postToBackEnd();
     };
-
-    // test
-    useEffect(() => {
-        if (pdData) {
-            let temp = pdData.replace("[", "");
-            temp = temp.replace("]", "");
-            let temps = temp.split(",");
-            setParsedData(temps);
-        }
-    }, [pdData]);
 
     return (
         <Box>
@@ -105,7 +94,7 @@ const AiProccessing = () => {
                     <Loading />
                 </>
             ) : pdData ? (
-                <AiProccessingView data={parsedData} />
+                <AiProccessingView data={pdData} />
             ) : null}
         </Box>
     );
