@@ -7,7 +7,7 @@ import Intro from "@/components/Intro";
 
 export const metadata: Metadata = {
     title: "요즘 트렌트를 Zoom - Yozoom",
-    description: "틱톡 트렌드 분석 사이트",
+    description: "키워드 분석 및 시각화 사이트",
 };
 
 export default function RootLayout({
